@@ -1,14 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>TevanCarrellDotCom</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <meta name="Description"
+        content="Learn about Tevan Carrell's software engineering career. 
+                 The site features a chat interface to learn more about his professional 
+                 doings.">
+
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Tevan</title>
+  <link rel="icon"
+        type="image/x-icon"
+        href="assets/favicon.ico">
+  <base href="/">
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="app-loading">
+      <svg class="spinner"
+           viewBox="25 25 50 50">
+        <circle class="path"
+                cx="50"
+                cy="50"
+                r="20"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10">
+        </circle>
+      </svg>
+    </div>
 </body>
+
+<!-- Google Analytics -->
+<script async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-118174069-1" />
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118174069-1');
+</script>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
+      rel="stylesheet">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js">
+</script>
+
 </html>
