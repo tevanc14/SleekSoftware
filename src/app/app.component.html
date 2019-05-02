@@ -1,6 +1,22 @@
-<div id="dialogflow">
+<!-- <div id="dialogflow">
   <iframe height="100%"
           width="100%"
           frameborder="0"
           src="https://console.dialogflow.com/api-client/demo/embedded/e4e1efec-aa47-48f1-a703-e601aa454914"></iframe>
-</div>
+</div> -->
+
+<mat-toolbar color="primary">Tevan Carrell</mat-toolbar>
+
+<mat-form-field>
+  <input matInput
+         placeholder="Ask a question..."
+         [(ngModel)]="queryInput">
+</mat-form-field>
+
+<button mat-raised-button
+        color="accent"
+        (click)="converse()">SUBMIT</button>
+
+<ng-container *ngFor="let message of conversation">
+  <h2 class="mat-h2">{{ message.content }}</h2>
+</ng-container>
