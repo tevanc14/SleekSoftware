@@ -1,6 +1,6 @@
 {
   "name": "tevan-carrell-dot-com",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "core-js": "^2.5.4",
     "dialogflow": "^0.8.2",
+    "hammerjs": "^2.0.8",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

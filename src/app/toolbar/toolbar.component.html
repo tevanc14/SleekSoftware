@@ -2,24 +2,43 @@
   <span>Tevan Carrell</span>
 
   <span class="link-buttons">
+    <a
+      mat-icon-button
+      class="link-icon"
+      matTooltip="Email"
+      href="mailto:tevanc14@gmail.com"
+    >
+      <fa-icon
+        [icon]="['fas', 'envelope']"
+        aria-label="email"
+        size="3x"
+      ></fa-icon>
+    </a>
 
-    <button mat-icon-button
-            class="link-icon">
-      <fa-icon [icon]="['fas', 'envelope']"
-               aria-label="envelope"></fa-icon>
-    </button>
+    <a
+      mat-icon-button
+      class="link-icon"
+      matTooltip="LinkedIn"
+      href="https://linkedin.com/in/tevan-carrell"
+    >
+      <fa-icon
+        [icon]="['fab', 'linkedin']"
+        aria-label="linkedin"
+        size="3x"
+      ></fa-icon>
+    </a>
 
-    <button mat-icon-button
-            class="link-icon">
-      <fa-icon [icon]="['fab', 'linkedin']"
-               aria-label="linkedin"></fa-icon>
-    </button>
-
-    <button mat-icon-button
-            class="link-icon">
-      <fa-icon [icon]="['fab', 'github']"
-               aria-label="github"></fa-icon>
-    </button>
-
+    <a
+      mat-icon-button
+      class="link-icon"
+      matTooltip="Github"
+      href="https://github.com/tevanc14"
+    >
+      <fa-icon
+        [icon]="['fab', 'github']"
+        aria-label="github"
+        size="3x"
+      ></fa-icon>
+    </a>
   </span>
 </mat-toolbar>

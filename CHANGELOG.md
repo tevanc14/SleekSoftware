@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.0] -2019-05-04
+
+Added
+
+- Ugly, partially working chat
+
+## [1.3.0] - 2019-05-04
+
+Added
+
+- Toolbar links
+- Send button sends query
+
+Changed
+
+- Theming to Sleek colors and dark background
+
 ## [1.2.0] - 2019-05-03
 
 Added

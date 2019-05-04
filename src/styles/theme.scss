@@ -1,0 +1,97 @@
+@import "~@angular/material/theming";
+
+$primary: (
+  50: #ebf6f7,
+  100: #cde8eb,
+  200: #abd8dd,
+  300: #89c8cf,
+  400: #70bdc5,
+  500: #57b1bb,
+  600: #4faab5,
+  700: #46a1ac,
+  800: #3c98a4,
+  900: #2c8896,
+  A100: #dafaff,
+  A200: #a7f3ff,
+  A400: #74ecff,
+  A700: #5ae8ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$accent: (
+  50: #fefeeb,
+  100: #fcfcce,
+  200: #fafaae,
+  300: #f8f88d,
+  400: #f7f774,
+  500: #f5f55c,
+  600: #f4f454,
+  700: #f2f24a,
+  800: #f0f041,
+  900: #eeee30,
+  A100: #ffffff,
+  A200: #fffffd,
+  A400: #ffffca,
+  A700: #ffffb1,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$palette-primary: mat-palette($primary);
+$palette-accent: mat-palette($accent);
+$palette-warn: mat-palette($mat-red);
+
+$background-color: #313037;
+$background: (
+  background: $background-color
+);
+$foreground: ();
+$theme: (
+  primary: $palette-primary,
+  accent: $palette-accent,
+  warn: $palette-warn,
+  is-dark: true,
+  foreground: $foreground,
+  background: $background
+);
+
+$primary-map: map-get($theme, primary);
+$primary: mat-color($primary-map, default);
+$primary-light: mat-color($primary-map, lighter);
+$primary-dark: mat-color($primary-map, darker);
+
+$accent-map: map-get($theme, accent);
+$accent: mat-color($accent-map, default);
+$accent-light: mat-color($accent-map, lighter);
+$accent-dark: mat-color($accent-map, darker);
+
+@include angular-material-theme($theme);

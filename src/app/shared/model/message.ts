@@ -1,5 +1,5 @@
 export class Message {
-  constructor(public content: string, public sentBy: MessageSender) {}
+  constructor(public content: string, public sender: MessageSender) {}
 }
 
 export enum MessageSender {

@@ -1,1 +1,30 @@
+@import "../../../styles/theme.scss";
 
+$message-width: 75%;
+
+.container {
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: $message-width;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  clear: both;
+}
+
+.message.bot {
+  float: left;
+  background-color: #757575;
+  color: white;
+}
+
+.message.user {
+  float: right;
+  background-color: #7af9a0;
+  color: black;
+}
