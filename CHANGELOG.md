@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.0] - 2019-05-03
+
+Added
+
+- Material input box
+- Font Awesome icons
+
+Changed
+
+- Split out components
+
 ## [1.1.0] - 2019-05-01
 
 Added

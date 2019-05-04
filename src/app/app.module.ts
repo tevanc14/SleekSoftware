@@ -1,19 +1,29 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from "./app.component";
-import { MaterialModule } from "./material.module";
+import { FontAwesomeIconsModule } from "./shared/module/font-awesome.module";
+import { MaterialModule } from "./shared/module/material.module";
+import { ToolbarComponent } from "./toolbar/toolbar.component";
+import { ChatComponent } from "./chat/chat.component";
+import { QueryComponent } from "./chat/query/query.component";
+import { ConversationComponent } from "./chat/conversation/conversation.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    ChatComponent,
+    QueryComponent,
+    ConversationComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
+    FontAwesomeIconsModule,
     FormsModule,
     HttpClientModule,
     MaterialModule

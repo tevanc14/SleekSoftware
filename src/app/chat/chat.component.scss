@@ -2,23 +2,7 @@ $material-form-field-margin: 0.25em;
 $material-form-field-padding: 1.34375em;
 $query-padding: $material-form-field-margin+$material-form-field-padding;
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-#dialogflow {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0px;
-}
-
-.queryInput {
+.query {
   width: 100%;
   position: absolute;
   bottom: 0;
