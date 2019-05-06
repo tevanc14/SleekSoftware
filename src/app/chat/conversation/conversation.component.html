@@ -1,12 +1,10 @@
-<div class="container">
+<div #autoScroll>
   <ng-container *ngFor="let message of conversation">
-    <h2
-      class="mat-h2 message"
-      [ngClass]="{
+    <h2 class="mat-h2 message"
+        [ngClass]="{
         bot: isSentByBot(message),
         user: isSentByUser(message)
-      }"
-    >
+      }">
       {{ message.content }}
     </h2>
   </ng-container>

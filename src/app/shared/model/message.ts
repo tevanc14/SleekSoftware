@@ -4,5 +4,6 @@ export class Message {
 
 export enum MessageSender {
   User = "user",
-  Bot = "bot"
+  Bot = "bot",
+  System = "system"
 }

@@ -1,10 +1,11 @@
 <mat-form-field class="input"
                 appearance="outline"
-                color="accent">
-  <mat-label>Ask me something</mat-label>
+                color="primary">
+  <mat-label>Ask something</mat-label>
   <input matInput
          [(ngModel)]="queryInput"
-         (keyup.enter)="converse()" />
+         (keyup.enter)="converse()"
+         maxlength="250" />
   <button mat-icon-button
           matSuffix
           (click)="converse()"

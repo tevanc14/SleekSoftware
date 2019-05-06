@@ -1,6 +1,18 @@
 # Changelog
 
-## [1.4.0] -2019-05-04
+## [1.5.0] - 2019-05-05
+
+Added
+
+- Navigation buttons in toolbar
+- Word breaks in messages
+- Temporary logo with non-matching background
+
+Changed
+
+- Went to a light Material theme (But it can be switched far easier now)
+
+## [1.4.0] - 2019-05-04
 
 Added
 

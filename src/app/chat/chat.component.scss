@@ -1,12 +1,19 @@
 $material-form-field-margin: 0.25em;
 $material-form-field-padding: 1.34375em;
-$query-padding: $material-form-field-margin+$material-form-field-padding;
+$padding: $material-form-field-margin+$material-form-field-padding;
+
+.conversation {
+  max-width: 100%;
+  padding-top: $padding;
+  padding-left: $padding;
+  padding-right: $padding;
+}
 
 .query {
   width: 100%;
   position: absolute;
   bottom: 0;
-  padding-left: $query-padding;
-  padding-right: $query-padding;
+  padding-left: $padding;
+  padding-right: $padding;
   box-sizing: border-box;
 }

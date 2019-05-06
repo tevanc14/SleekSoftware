@@ -2,11 +2,6 @@
 
 $message-width: 75%;
 
-.container {
-  padding: 25px;
-  overflow-y: auto;
-}
-
 .message {
   max-width: $message-width;
   display: inline-block;
@@ -15,6 +10,9 @@ $message-width: 75%;
   margin-bottom: 25px;
   font-size: 16px;
   clear: both;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .message.bot {

@@ -1,44 +1,18 @@
-<mat-toolbar color="primary">
-  <span>Tevan Carrell</span>
+<mat-toolbar class="toolbar"
+             color="primary"
+             fxLayout="row"
+             fxLayoutAlign="space-between center">
+  <img class="sleek-logo"
+       src="assets/sleek.png">
 
-  <span class="link-buttons">
-    <a
-      mat-icon-button
-      class="link-icon"
-      matTooltip="Email"
-      href="mailto:tevanc14@gmail.com"
-    >
-      <fa-icon
-        [icon]="['fas', 'envelope']"
-        aria-label="email"
-        size="3x"
-      ></fa-icon>
-    </a>
-
-    <a
-      mat-icon-button
-      class="link-icon"
-      matTooltip="LinkedIn"
-      href="https://linkedin.com/in/tevan-carrell"
-    >
-      <fa-icon
-        [icon]="['fab', 'linkedin']"
-        aria-label="linkedin"
-        size="3x"
-      ></fa-icon>
-    </a>
-
-    <a
-      mat-icon-button
-      class="link-icon"
-      matTooltip="Github"
-      href="https://github.com/tevanc14"
-    >
-      <fa-icon
-        [icon]="['fab', 'github']"
-        aria-label="github"
-        size="3x"
-      ></fa-icon>
-    </a>
+  <span>
+    <a mat-button
+       routerLink="/about"
+       routerLinkActive="active"
+       [ngClass]="{'underline': isAboutRoute()}">About</a>
+    <a mat-button
+       routerLink="/portfolio"
+       routerLinkActive="active"
+       [ngClass]="{'underline': isPortfolioRoute()}">Portfolio</a>
   </span>
 </mat-toolbar>
