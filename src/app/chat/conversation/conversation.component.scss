@@ -1,6 +1,22 @@
 @import "../../../styles/theme.scss";
 
 $message-width: 75%;
+$material-form-field-margin: 0.25em;
+$material-form-field-padding: 1.34375em;
+$padding: $material-form-field-margin+$material-form-field-padding;
+
+.conversation {
+  position: fixed;
+  width: 100%;
+  top: 56px;
+  bottom: 80px;
+  padding-top: $padding;
+  padding-left: $padding;
+  padding-right: $padding;
+  padding-bottom: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
 .message {
   max-width: $message-width;

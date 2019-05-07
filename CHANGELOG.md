@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.0] - 2019-05-06
+
+Added
+
+- Properly scrolling conversation
+- Autoscroll to bottom on new message
+
+Changed
+
+- Fixed height of toolbar
+
 ## [1.5.0] - 2019-05-05
 
 Added
