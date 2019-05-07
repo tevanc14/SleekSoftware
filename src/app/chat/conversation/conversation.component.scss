@@ -1,18 +1,17 @@
 @import "../../../styles/theme.scss";
+@import "../../../styles/variables.scss";
 
 $message-width: 75%;
-$material-form-field-margin: 0.25em;
-$material-form-field-padding: 1.34375em;
-$padding: $material-form-field-margin+$material-form-field-padding;
+$message-font-size: 16px;
 
 .conversation {
   position: fixed;
   width: 100%;
   top: 56px;
   bottom: 80px;
-  padding-top: $padding;
-  padding-left: $padding;
-  padding-right: $padding;
+  padding-top: $chat-padding;
+  padding-left: $chat-padding;
+  padding-right: $chat-padding;
   padding-bottom: 0;
   overflow-y: auto;
   box-sizing: border-box;
@@ -20,11 +19,10 @@ $padding: $material-form-field-margin+$material-form-field-padding;
 
 .message {
   max-width: $message-width;
-  display: inline-block;
   padding: 15px 25px;
   border-radius: 3px;
   margin-bottom: 25px;
-  font-size: 16px;
+  font-size: $message-font-size;
   clear: both;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -41,4 +39,11 @@ $padding: $material-form-field-margin+$material-form-field-padding;
   float: right;
   background-color: #7af9a0;
   color: black;
+}
+
+.message-card {
+  float: left;
+  margin-bottom: 25px;
+  font-size: $message-font-size;
+  clear: both;
 }

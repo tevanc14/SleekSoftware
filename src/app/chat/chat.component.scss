@@ -1,12 +1,11 @@
-$material-form-field-margin: 0.25em;
-$material-form-field-padding: 1.34375em;
-$padding: $material-form-field-margin+$material-form-field-padding;
+@import "../../styles/variables.scss";
+
 
 .query {
   width: 100%;
   position: fixed;
   bottom: 0;
-  padding-left: $padding;
-  padding-right: $padding;
+  padding-left: $chat-padding;
+  padding-right: $chat-padding;
   box-sizing: border-box;
 }

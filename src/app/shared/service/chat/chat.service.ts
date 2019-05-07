@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { ReplaySubject } from "rxjs";
 import { v4 as uuid } from "uuid";
 import { DialogflowForwarderRequest } from "../../model/dialogflowForwarderRequest";
-import { Message, MessageSender } from "../../model/message";
+import { Message, MessageSender, Card, Button } from "../../model/message";
 import { dialogflowForwarderUrl } from "../../../../assets/secrets";
 
 @Injectable({
@@ -57,6 +57,8 @@ export class ChatService {
         this.handleTextFulfillment(fulfillmentMessage);
       } else if (fulfillmentMessage.payload) {
         this.handlePayloadFulfillment(fulfillmentMessage);
+      } else if (fulfillmentMessage.card) {
+        this.handleCardFulfillment(fulfillmentMessage);
       }
     }
   }
@@ -68,6 +70,27 @@ export class ChatService {
   }
 
   handlePayloadFulfillment(fulfillmentMessage: any): void {}
+
+  handleCardFulfillment(fulfillmentMessage: any): void {
+    const cardResponse = fulfillmentMessage.card;
+    const buttons: Array<Button> = this.buildButtonsFromCardResponse(
+      cardResponse
+    );
+    const card: Card = new Card(
+      cardResponse.title,
+      cardResponse.subtitle,
+      buttons
+    );
+    this.addToConversation(new Message(null, MessageSender.Bot, card));
+  }
+
+  buildButtonsFromCardResponse(cardResponse: any): Array<Button> {
+    const buttons: Array<Button> = [];
+    for (const button of cardResponse.buttons) {
+      buttons.push(new Button(button.text, button.postback));
+    }
+    return buttons;
+  }
 
   invokeWelcomeIntent(): void {
     this.chatWithBot(new Message("Where am I?", MessageSender.System));

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0] - 2019-05-06
+
+Added
+
+- Support for Firebase function added cards
+
+Removed
+
+- Loading spinner as there isn't enough front loaded activity for it to be worth it
+
 ## [1.6.0] - 2019-05-06
 
 Added
