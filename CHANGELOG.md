@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.0] - 2019-05-06
+
+Added
+
+- Support for Dialogflow cards (without Font Awesome icons because it would have been real hacky to get something to work, and it works without them)
+
 ## [1.7.0] - 2019-05-06
 
 Added

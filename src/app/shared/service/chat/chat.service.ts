@@ -69,7 +69,18 @@ export class ChatService {
     );
   }
 
-  handlePayloadFulfillment(fulfillmentMessage: any): void {}
+  handlePayloadFulfillment(fulfillmentMessage: any): void {
+    const payloadResponse = fulfillmentMessage.payload.fields;
+    const buttons: Array<Button> = this.buildButtonsFromPayloadResponse(
+      payloadResponse
+    );
+    const card: Card = new Card(
+      payloadResponse.title.stringValue,
+      payloadResponse.content.stringValue,
+      buttons
+    );
+    this.addToConversation(new Message(null, MessageSender.Bot, card));
+  }
 
   handleCardFulfillment(fulfillmentMessage: any): void {
     const cardResponse = fulfillmentMessage.card;
@@ -82,6 +93,17 @@ export class ChatService {
       buttons
     );
     this.addToConversation(new Message(null, MessageSender.Bot, card));
+  }
+
+  buildButtonsFromPayloadResponse(payloadResponse: any): Array<Button> {
+    const buttons: Array<Button> = [];
+    for (const button of payloadResponse.buttons.listValue.values) {
+      const buttonFields = button.structValue.fields;
+      buttons.push(
+        new Button(buttonFields.text.stringValue, buttonFields.link.stringValue)
+      );
+    }
+    return buttons;
   }
 
   buildButtonsFromCardResponse(cardResponse: any): Array<Button> {

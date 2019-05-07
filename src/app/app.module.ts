@@ -12,8 +12,8 @@ import { ToolbarComponent } from "./toolbar/toolbar.component";
 import { ChatComponent } from "./chat/chat.component";
 import { QueryComponent } from "./chat/query/query.component";
 import { ConversationComponent } from "./chat/conversation/conversation.component";
-import { AppRoutingModule } from './app-routing.module';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { PortfolioComponent } from "./portfolio/portfolio.component";
 
 @NgModule({
   declarations: [

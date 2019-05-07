@@ -10,17 +10,20 @@
       {{ message.content }}
     </h2>
 
+
     <ng-template #messageCard>
       <mat-card class="message-card">
-        <mat-card-title>{{message.card.title}}</mat-card-title>
+        <mat-card-title>
+          {{ message.card.title }}
+        </mat-card-title>
         <mat-card-content>
-          <p>{{message.card.content}}</p>
+          <p>{{ message.card.content }}</p>
         </mat-card-content>
         <mat-card-actions>
           <a *ngFor="let button of message.card.buttons"
              href="{{button.link}}"
              target="_blank"
-             mat-button>{{button.text}}</a>
+             mat-button>{{ button.text }}</a>
         </mat-card-actions>
       </mat-card>
     </ng-template>
