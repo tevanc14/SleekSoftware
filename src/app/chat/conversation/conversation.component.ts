@@ -43,4 +43,13 @@ export class ConversationComponent implements AfterViewChecked, OnInit {
   isSentByUser(message: Message): boolean {
     return message.sender === MessageSender.User;
   }
+
+  waitingOnResponse(): boolean {
+    if (this.conversation.length === 0) {
+      return true;
+    } else {
+      const lastSentBy: MessageSender = this.conversation.slice(-1)[0].sender;
+      return lastSentBy !== MessageSender.Bot;
+    }
+  }
 }

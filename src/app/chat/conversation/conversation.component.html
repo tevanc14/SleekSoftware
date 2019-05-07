@@ -28,4 +28,13 @@
       </mat-card>
     </ng-template>
   </ng-container>
+
+  <div class="message bot"
+       *ngIf="waitingOnResponse()">
+    <div class="wave">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
 </div>

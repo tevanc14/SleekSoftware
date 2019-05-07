@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.9.0] - 2019-05-06
+
+Added
+
+- Loading dots when bot is responding
+
 ## [1.8.0] - 2019-05-06
 
 Added
