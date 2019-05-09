@@ -1,6 +1,9 @@
+@import "../../styles/theme.scss";
+@import "../../styles/variables.scss";
+
 .toolbar {
-  min-height: 56px;
-  max-height: 56px;
+  min-height: $toolbar-height;
+  max-height: $toolbar-height;
 }
 
 .sleek-logo {
@@ -19,5 +22,5 @@
   bottom: 0;
   width: 80%;
   left: 10%;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid black;
 }

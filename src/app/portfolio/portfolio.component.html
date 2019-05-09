@@ -1,3 +1,103 @@
-<p>
-  Insert portfolio here
-</p>
+<div class="portfolio">
+
+  <div class="centered-view"
+       fxLayout="column"
+       fxLayoutAlign="space-around center"
+       fxLayoutGap="100px">
+
+    <ng-container *ngFor="let projectCategory of projectCategories">
+
+      <div class="mat-display-1 project-type-heading"
+           fxLayout="row"
+           fxLayoutAlign="space-evenly center">
+        <mat-icon class="project-type-icon"
+                  [inline]="true">{{ projectCategory.matIconName }}</mat-icon>
+        {{ projectCategory.title }}
+      </div>
+
+      <ng-container *ngFor="let project of projectCategory.projects; let i=index">
+        <div class="project"
+             fxLayout="row"
+             fxLayout.lt-md="column"
+             fxLayoutAlign="space-between center"
+             fxLayoutGap="100px"
+             fxFlexFill>
+
+          <div class="project-info"
+               fxLayout="column"
+               fxLayoutAlign="space-between center"
+               fxFlex="50">
+            <div>
+              <div class="mat-h2">{{ project.name }}</div>
+              <div class="mat-body">{{ project.description }}</div>
+            </div>
+          </div>
+
+          <div class="project-visualization"
+               fxLayout="row"
+               fxLayout.lt-md="column"
+               fxLayoutAlign="center center"
+               fxFlex="50">
+            <div class="demo-row"
+                 [ngClass.lt-md]="{
+                   'demo-col': true,
+                   'demo-row': false
+                 }">
+              <img [ngClass]="{
+                     'mobile-demo': isMobileDemo(project.demo),
+                     'web-demo': isWebDemo(project.demo)
+                   }"
+                   src="{{ project.demo.path }}"
+                   loading="lazy">
+            </div>
+            <div class="links"
+                 fxLayout="column"
+                 fxLayout.lt-md="row"
+                 fxLayoutAlign="space-between center"
+                 fxLayoutGap="8px">
+              <a mat-icon-button
+                 class="link-button"
+                 *ngIf="hasGithubLink(project.links)"
+                 href="{{ project.links.githubUrl }}">
+                <fa-icon [icon]="['fab', 'github']"
+                         size="2x"></fa-icon>
+              </a>
+
+              <a mat-icon-button
+                 class="link-button"
+                 *ngIf="hasAndroidLink(project.links)"
+                 href="{{ project.links.androidUrl }}">
+                <fa-icon [icon]="['fab', 'android']"
+                         size="2x"></fa-icon>
+              </a>
+
+              <a mat-icon-button
+                 class="link-button"
+                 *ngIf="hasIosLink(project.links)"
+                 href="{{ project.links.iosUrl }}">
+                <fa-icon [icon]="['fab', 'apple']"
+                         size="2x"></fa-icon>
+              </a>
+
+              <a mat-icon-button
+                 class="link-button"
+                 *ngIf="hasWebLink(project.links)"
+                 href="{{ project.links.webUrl }}">
+                <fa-icon [icon]="['fas', 'link']"
+                         size="lg"></fa-icon>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <mat-divider color="accent"
+                     *ngIf="i != projectCategory.projects.length-1"></mat-divider>
+
+      </ng-container>
+
+    </ng-container>
+
+  </div>
+
+</div>

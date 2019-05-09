@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.10.0] - 2019-05-08
+
+Added
+
+- Portfolio page
+
+Changed
+
+- Color of bot messages matches card background
+
+Removed
+
+- Autocomplete in query
+
 ## [1.9.0] - 2019-05-06
 
 Added

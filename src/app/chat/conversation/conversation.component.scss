@@ -7,7 +7,7 @@ $message-font-size: 16px;
 .conversation {
   position: fixed;
   width: 100%;
-  top: 56px;
+  top: $toolbar-height;
   bottom: 80px;
   padding-top: $chat-padding;
   padding-left: $chat-padding;
@@ -31,13 +31,13 @@ $message-font-size: 16px;
 
 .message.bot {
   float: left;
-  background-color: #757575;
+  background-color: $theme-card;
   color: white;
 }
 
 .message.user {
   float: right;
-  background-color: #7af9a0;
+  background-color: $theme-accent;
   color: black;
 }
 

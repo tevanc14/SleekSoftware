@@ -5,7 +5,8 @@
   <input matInput
          [(ngModel)]="queryInput"
          (keyup.enter)="converse()"
-         maxlength="250" />
+         maxlength="250"
+         autocomplete="off" />
   <button mat-icon-button
           matSuffix
           (click)="converse()"

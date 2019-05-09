@@ -88,22 +88,28 @@ A400 : #ffffff,
 A700 : #ffffff,
 ));
 
-$primary: $gray;
-$accent: $teal;
+$primary: $teal;
+$accent: $yellow;
 
 $palette-primary: mat-palette($primary);
 $palette-accent: mat-palette($accent);
 $palette-warn: mat-palette($mat-red);
 
-$theme: mat-light-theme($palette-primary, $palette-accent, $palette-warn);
-$primary-map: map-get($theme, primary);
-$primary: mat-color($primary-map, default);
-$primary-light: mat-color($primary-map, lighter);
-$primary-dark: mat-color($primary-map, darker);
+$theme: mat-dark-theme($palette-primary, $palette-accent, $palette-warn);
+$theme-primary-map: map-get($theme, primary);
+$theme-primary: mat-color($theme-primary-map, default);
+$theme-primary-light: mat-color($theme-primary-map, lighter);
+$theme-primary-dark: mat-color($theme-primary-map, darker);
 
-$accent-map: map-get($theme, accent);
-$accent: mat-color($accent-map, default);
-$accent-light: mat-color($accent-map, lighter);
-$accent-dark: mat-color($accent-map, darker);
+$theme-accent-map: map-get($theme, accent);
+$theme-accent: mat-color($theme-accent-map, default);
+$theme-accent-light: mat-color($theme-accent-map, lighter);
+$theme-accent-dark: mat-color($theme-accent-map, darker);
+
+$theme-foreground-map: map-get($theme, foreground);
+$theme-text: map-get($theme-foreground-map, text);
+$theme-background-map: map-get($theme, background);
+$theme-background: map-get($theme-background-map, background);
+$theme-card: map-get($theme-background-map, card);
 
 @include angular-material-theme($theme);

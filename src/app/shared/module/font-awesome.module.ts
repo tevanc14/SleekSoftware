@@ -1,8 +1,13 @@
 import { NgModule } from "@angular/core";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAndroid,
+  faApple,
+  faGithub,
+  faLinkedin
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons";
 
 @NgModule({
   imports: [FontAwesomeModule],
@@ -10,9 +15,12 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 })
 export class FontAwesomeIconsModule {
   constructor() {
+    library.add(faAndroid);
+    library.add(faApple);
     library.add(faLinkedin);
     library.add(faGithub);
 
     library.add(faEnvelope);
+    library.add(faLink);
   }
 }

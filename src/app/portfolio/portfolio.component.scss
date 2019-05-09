@@ -1,0 +1,57 @@
+@import "../../styles/theme.scss";
+@import "../../styles/variables.scss";
+
+.portfolio {
+  position: fixed;
+  width: 100%;
+  top: $toolbar-height;
+  bottom: 0;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.centered-view {
+  position: relative;
+  width: 80%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 0 auto;
+}
+
+.project-type-icon {
+  padding-right: 8px;
+}
+
+.project-type-heading {
+  margin: 0;
+}
+
+.demo-row {
+  margin-right: 50px;
+}
+
+.demo-col {
+  margin-bottom: 50px;
+}
+
+.mobile-demo {
+  height: 400px;
+  width: 200px;
+  border: 15px solid $theme-card;
+  border-radius: 15px;
+}
+
+.web-demo {
+  height: 164.3971px;
+  width: 275px;
+  border: 15px solid $theme-card;
+  border-radius: 15px;
+}
+
+.links {
+  text-align: center;
+}
+
+.link-button {
+  padding-top: 6px;
+}
