@@ -3,11 +3,11 @@
   <div class="centered-view"
        fxLayout="column"
        fxLayoutAlign="space-around center"
-       fxLayoutGap="100px">
+       fxLayoutGap="96px">
 
     <ng-container *ngFor="let projectCategory of projectCategories">
 
-      <div class="mat-display-1 project-type-heading"
+      <div class="mat-display-2 project-type-heading"
            fxLayout="row"
            fxLayoutAlign="space-evenly center">
         <mat-icon class="project-type-icon"
@@ -20,16 +20,33 @@
              fxLayout="row"
              fxLayout.lt-md="column"
              fxLayoutAlign="space-between center"
-             fxLayoutGap="100px"
+             fxLayoutGap="96px"
              fxFlexFill>
 
-          <div class="project-info"
-               fxLayout="column"
+          <div fxLayout="column"
                fxLayoutAlign="space-between center"
                fxFlex="50">
-            <div>
-              <div class="mat-h2">{{ project.name }}</div>
-              <div class="mat-body">{{ project.description }}</div>
+
+            <div fxLayout="row"
+                 fxLayout.lt-md="column"
+                 fxLayoutAlign="space-between center">
+
+              <img *ngIf="project.logoUrl"
+                   class="logo logo-row"
+                   [ngClass.lt-md]="{
+                     'logo-col': true,
+                     'logo-row': false
+                   }"
+                   src="{{ project.logoUrl }}"
+                   loading="lazy">
+
+              <div fxLayout="column"
+                   fxLayoutAlign="space-between center">
+
+                <div class="mat-h1">{{ project.name }}</div>
+                <div class="mat-body">{{ project.description }}</div>
+
+              </div>
             </div>
           </div>
 
@@ -38,27 +55,35 @@
                fxLayout.lt-md="column"
                fxLayoutAlign="center center"
                fxFlex="50">
+
             <div class="demo-row"
                  [ngClass.lt-md]="{
                    'demo-col': true,
                    'demo-row': false
                  }">
-              <img [ngClass]="{
+
+              <img *ngIf="project.demo.path"
+                   [ngClass]="{
                      'mobile-demo': isMobileDemo(project.demo),
-                     'web-demo': isWebDemo(project.demo)
+                     'web-demo': isWebDemo(project.demo),
+                     'bit-demo': isBitDemo(project.demo)
                    }"
                    src="{{ project.demo.path }}"
                    loading="lazy">
+
             </div>
+
             <div class="links"
                  fxLayout="column"
                  fxLayout.lt-md="row"
                  fxLayoutAlign="space-between center"
                  fxLayoutGap="8px">
+
               <a mat-icon-button
                  class="link-button"
                  *ngIf="hasGithubLink(project.links)"
-                 href="{{ project.links.githubUrl }}">
+                 href="{{ project.links.githubUrl }}"
+                 target="_blank">
                 <fa-icon [icon]="['fab', 'github']"
                          size="2x"></fa-icon>
               </a>
@@ -66,7 +91,8 @@
               <a mat-icon-button
                  class="link-button"
                  *ngIf="hasAndroidLink(project.links)"
-                 href="{{ project.links.androidUrl }}">
+                 href="{{ project.links.androidUrl }}"
+                 target="_blank">
                 <fa-icon [icon]="['fab', 'android']"
                          size="2x"></fa-icon>
               </a>
@@ -74,7 +100,8 @@
               <a mat-icon-button
                  class="link-button"
                  *ngIf="hasIosLink(project.links)"
-                 href="{{ project.links.iosUrl }}">
+                 href="{{ project.links.iosUrl }}"
+                 target="_blank">
                 <fa-icon [icon]="['fab', 'apple']"
                          size="2x"></fa-icon>
               </a>
@@ -82,7 +109,8 @@
               <a mat-icon-button
                  class="link-button"
                  *ngIf="hasWebLink(project.links)"
-                 href="{{ project.links.webUrl }}">
+                 href="{{ project.links.webUrl }}"
+                 target="_blank">
                 <fa-icon [icon]="['fas', 'link']"
                          size="lg"></fa-icon>
               </a>
@@ -91,7 +119,7 @@
 
         </div>
 
-        <mat-divider color="accent"
+        <mat-divider class="divider"
                      *ngIf="i != projectCategory.projects.length-1"></mat-divider>
 
       </ng-container>

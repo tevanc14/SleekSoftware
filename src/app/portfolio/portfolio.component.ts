@@ -29,6 +29,10 @@ export class PortfolioComponent implements OnInit {
     return demo.demoType === DemoType.Web;
   }
 
+  isBitDemo(demo: Demo): boolean {
+    return demo.demoType === DemoType.Bit;
+  }
+
   hasGithubLink(projectLinks: ProjectLinks): boolean {
     return projectLinks.githubUrl !== null;
   }

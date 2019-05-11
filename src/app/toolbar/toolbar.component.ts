@@ -20,7 +20,9 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {}
 
   isAboutRoute(): boolean {
-    return this.stripCurrentRoute() === "about";
+    const strippedRoute = this.stripCurrentRoute();
+    // Needs empty string in case it comes to base path without redirect
+    return strippedRoute === "about" || strippedRoute === "";
   }
 
   isPortfolioRoute(): boolean {

@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.11.0] - 2019-04-10
+
+Added
+
+- Check for toolbar current route underline when first navigating to page
+- Divider between portfolio projects
+- Project logo area
+- More project descriptions
+
 ## [1.10.0] - 2019-05-08
 
 Added
