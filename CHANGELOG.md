@@ -1,6 +1,19 @@
 # Changelog
 
-## [1.11.0] - 2019-04-10
+## [1.12.0] - 2019-05-15
+
+Added
+
+- Elevation to toolbar
+- Tooltip for Bits description
+
+Changed
+
+- Coloring of project category icons
+- Coloring of navigation underline
+- Coloring of link buttons for a project
+
+## [1.11.0] - 2019-05-10
 
 Added
 

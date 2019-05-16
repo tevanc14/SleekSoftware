@@ -11,8 +11,16 @@
            fxLayout="row"
            fxLayoutAlign="space-evenly center">
         <mat-icon class="project-type-icon"
+                  color="primary"
                   [inline]="true">{{ projectCategory.matIconName }}</mat-icon>
+
         {{ projectCategory.title }}
+
+        <button *ngIf="projectCategory.title == 'Bits'"
+                matTooltip="Unbranded, miscellaneous projects"
+                mat-icon-button>
+          <mat-icon>help</mat-icon>
+        </button>
       </div>
 
       <ng-container *ngFor="let project of projectCategory.projects; let i=index">
@@ -81,6 +89,7 @@
 
               <a mat-icon-button
                  class="link-button"
+                 color="accent"
                  *ngIf="hasGithubLink(project.links)"
                  href="{{ project.links.githubUrl }}"
                  target="_blank">
@@ -90,6 +99,7 @@
 
               <a mat-icon-button
                  class="link-button"
+                 color="accent"
                  *ngIf="hasAndroidLink(project.links)"
                  href="{{ project.links.androidUrl }}"
                  target="_blank">
@@ -99,6 +109,7 @@
 
               <a mat-icon-button
                  class="link-button"
+                 color="accent"
                  *ngIf="hasIosLink(project.links)"
                  href="{{ project.links.iosUrl }}"
                  target="_blank">
@@ -108,6 +119,7 @@
 
               <a mat-icon-button
                  class="link-button"
+                 color="accent"
                  *ngIf="hasWebLink(project.links)"
                  href="{{ project.links.webUrl }}"
                  target="_blank">
