@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.14.0] - 2019-05-17
+
+Added
+
+- Favicons
+
+Changed
+
+- Toolbar logo to have transparent background
+- Tab title
+
 ## [1.13.0] - 2019-05-16
 
 Added

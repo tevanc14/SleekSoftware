@@ -12,6 +12,7 @@ import { ToolbarComponent } from "./toolbar/toolbar.component";
 import { ChatComponent } from "./chat/chat.component";
 import { QueryComponent } from "./chat/query/query.component";
 import { ConversationComponent } from "./chat/conversation/conversation.component";
+import { APP_BASE_HREF } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 
@@ -34,7 +35,7 @@ import { PortfolioComponent } from "./portfolio/portfolio.component";
     MaterialModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: "/" }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
