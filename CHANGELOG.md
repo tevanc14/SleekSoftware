@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.13.0] - 2019-05-16
+
+Added
+
+- Not Too Shabby logo
+
 ## [1.12.1] - 2019-05-16
 
 Changed
