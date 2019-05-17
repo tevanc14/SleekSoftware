@@ -1,44 +1,40 @@
 <div class="portfolio">
-
   <div class="centered-view"
        fxLayout="column"
        fxLayoutAlign="space-around center"
        fxLayoutGap="96px">
-
     <ng-container *ngFor="let projectCategory of projectCategories">
-
       <div class="mat-display-2 project-type-heading"
            fxLayout="row"
            fxLayoutAlign="space-evenly center">
         <mat-icon class="project-type-icon"
-                  color="primary"
-                  [inline]="true">{{ projectCategory.matIconName }}</mat-icon>
+                  color="accent"
+                  [inline]="true">{{
+          projectCategory.matIconName
+        }}</mat-icon>
 
         {{ projectCategory.title }}
 
         <button *ngIf="projectCategory.title == 'Bits'"
-                matTooltip="Unbranded, miscellaneous projects"
+                matTooltip="Smaller, miscellaneous projects"
                 mat-icon-button>
           <mat-icon>help</mat-icon>
         </button>
       </div>
 
-      <ng-container *ngFor="let project of projectCategory.projects; let i=index">
+      <ng-container *ngFor="let project of projectCategory.projects; let i = index">
         <div class="project"
              fxLayout="row"
              fxLayout.lt-md="column"
              fxLayoutAlign="space-between center"
              fxLayoutGap="96px"
              fxFlexFill>
-
           <div fxLayout="column"
-               fxLayoutAlign="space-between center"
+               fxLayoutAlign="space-between start"
                fxFlex="50">
-
             <div fxLayout="row"
                  fxLayout.lt-md="column"
                  fxLayoutAlign="space-between center">
-
               <img *ngIf="project.logoUrl"
                    class="logo logo-row"
                    [ngClass.lt-md]="{
@@ -46,14 +42,12 @@
                      'logo-row': false
                    }"
                    src="{{ project.logoUrl }}"
-                   loading="lazy">
+                   loading="lazy" />
 
               <div fxLayout="column"
-                   fxLayoutAlign="space-between center">
-
+                   fxLayoutAlign="space-between start">
                 <div class="mat-h1">{{ project.name }}</div>
                 <div class="mat-body">{{ project.description }}</div>
-
               </div>
             </div>
           </div>
@@ -63,13 +57,11 @@
                fxLayout.lt-md="column"
                fxLayoutAlign="center center"
                fxFlex="50">
-
             <div class="demo-row"
                  [ngClass.lt-md]="{
                    'demo-col': true,
                    'demo-row': false
                  }">
-
               <img *ngIf="project.demo.path"
                    [ngClass]="{
                      'mobile-demo': isMobileDemo(project.demo),
@@ -77,8 +69,7 @@
                      'bit-demo': isBitDemo(project.demo)
                    }"
                    src="{{ project.demo.path }}"
-                   loading="lazy">
-
+                   loading="lazy" />
             </div>
 
             <div class="links"
@@ -86,10 +77,8 @@
                  fxLayout.lt-md="row"
                  fxLayoutAlign="space-between center"
                  fxLayoutGap="8px">
-
               <a mat-icon-button
                  class="link-button"
-                 color="accent"
                  *ngIf="hasGithubLink(project.links)"
                  href="{{ project.links.githubUrl }}"
                  target="_blank">
@@ -99,7 +88,6 @@
 
               <a mat-icon-button
                  class="link-button"
-                 color="accent"
                  *ngIf="hasAndroidLink(project.links)"
                  href="{{ project.links.androidUrl }}"
                  target="_blank">
@@ -109,7 +97,6 @@
 
               <a mat-icon-button
                  class="link-button"
-                 color="accent"
                  *ngIf="hasIosLink(project.links)"
                  href="{{ project.links.iosUrl }}"
                  target="_blank">
@@ -119,7 +106,6 @@
 
               <a mat-icon-button
                  class="link-button"
-                 color="accent"
                  *ngIf="hasWebLink(project.links)"
                  href="{{ project.links.webUrl }}"
                  target="_blank">
@@ -128,16 +114,10 @@
               </a>
             </div>
           </div>
-
         </div>
 
-        <mat-divider class="divider"
-                     *ngIf="i != projectCategory.projects.length-1"></mat-divider>
-
+        <mat-divider class="divider"></mat-divider>
       </ng-container>
-
     </ng-container>
-
   </div>
-
 </div>

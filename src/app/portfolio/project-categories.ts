@@ -7,21 +7,6 @@ import {
 } from "../shared/model/project";
 
 const projectCategories: Array<ProjectCategory> = [
-  new ProjectCategory("web", "Web", [
-    new Project(
-      "Colab Counters",
-      "Share counters with other users to track random things. Includes permissions based sharing and " +
-        "statistics for counters over time.",
-      null,
-      new Demo("colabCounters.gif", DemoType.Web),
-      new ProjectLinks(
-        "ColabCounters",
-        null,
-        null,
-        "https://counters.sleek.software"
-      )
-    )
-  ]),
   new ProjectCategory("smartphone", "Mobile", [
     new Project(
       "Anagrammatic",
@@ -36,6 +21,21 @@ const projectCategories: Array<ProjectCategory> = [
       null,
       new Demo("anagrammatic.gif", DemoType.Mobile),
       new ProjectLinks("NotTooShabby")
+    )
+  ]),
+  new ProjectCategory("web", "Web", [
+    new Project(
+      "Colab Counters",
+      "Share counters with other users to track random things. Includes permissions based sharing and " +
+        "statistics for counters over time.",
+      null,
+      new Demo("colabCounters.gif", DemoType.Web),
+      new ProjectLinks(
+        "ColabCounters",
+        null,
+        null,
+        "https://counters.sleek.software"
+      )
     )
   ]),
   new ProjectCategory("code", "Bits", [

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1] - 2019-05-16
+
+Changed
+
+- Left aligned logo, title, and description text for projects
+- Rearranged project categories
+
 ## [1.12.0] - 2019-05-15
 
 Added
