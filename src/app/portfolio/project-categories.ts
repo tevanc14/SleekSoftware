@@ -19,7 +19,7 @@ const projectCategories: Array<ProjectCategory> = [
       "Not Too Shabby",
       "Play a random video from a Youtube playlist by kisscactus. Includes a detailed watch history.",
       "notTooShabby.png",
-      new Demo("anagrammatic.gif", DemoType.Mobile),
+      new Demo("notTooShabby.gif", DemoType.Mobile),
       new ProjectLinks("NotTooShabby")
     )
   ]),

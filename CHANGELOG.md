@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0] - 2019-05-18
+
+Added
+
+- Firebase deployment
+- Not Too Shabby gif
+
 ## [1.14.0] - 2019-05-17
 
 Added
