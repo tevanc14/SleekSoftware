@@ -1,6 +1,6 @@
 {
   "name": "tevan-carrell-dot-com",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "scripts": {
     "build": "ng build --prod",
     "deploy": "npm run build; firebase deploy",

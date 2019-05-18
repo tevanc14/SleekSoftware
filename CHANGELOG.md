@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.15.1] - 2019-05-18
+
+Changed
+
+- Demo gif dimensions
+
 ## [1.15.0] - 2019-05-18
 
 Added
