@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/tevan-carrell-dot-com",
+    "public": "dist/sleek-software",
     "ignore": [
       "firebase.json",
       "**/.*",

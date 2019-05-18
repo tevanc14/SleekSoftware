@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tevan-carrell-dot-com": {
+    "sleek-software": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tevan-carrell-dot-com",
+            "outputPath": "dist/sleek-software",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tevan-carrell-dot-com:build"
+            "browserTarget": "sleek-software:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tevan-carrell-dot-com:build:production"
+              "browserTarget": "sleek-software:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tevan-carrell-dot-com:build"
+            "browserTarget": "sleek-software:build"
           }
         },
         "lint": {
@@ -81,5 +81,5 @@
       }
     }
   },
-  "defaultProject": "tevan-carrell-dot-com"
+  "defaultProject": "sleek-software"
 }

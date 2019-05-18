@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0] - 2019-05-18
+
+Changed
+
+- Name of project to sleek-software
+
 ## [1.15.1] - 2019-05-18
 
 Changed
