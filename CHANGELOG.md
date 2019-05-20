@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.1] - 2019-05-20
+
+Changed
+
+- Theme color to match background on mobile browsers
+
 ## [2.0.0] - 2019-05-18
 
 Changed
