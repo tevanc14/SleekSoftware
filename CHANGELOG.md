@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0] - 2019-05-26
+
+Added
+
+- robots.txt
+  - Allow all bots to all pages
+
 ## [2.1.0] - 2019-05-26
 
 Added
