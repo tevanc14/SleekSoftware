@@ -15,6 +15,8 @@ import { ConversationComponent } from "./chat/conversation/conversation.componen
 import { APP_BASE_HREF } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { PortfolioComponent } from "./portfolio/portfolio.component";
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: "/" }],
   bootstrap: [AppComponent]
