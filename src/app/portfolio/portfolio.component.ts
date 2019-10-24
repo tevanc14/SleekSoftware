@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import {
   ProjectCategory,
-  Project,
   Demo,
   DemoType,
   ProjectLinks

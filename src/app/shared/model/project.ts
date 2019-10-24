@@ -43,16 +43,38 @@ export enum DemoType {
 }
 
 export class ProjectLinks {
+  public githubUrl: string = null;
+  public androidUrl: string = null;
+  public iosUrl: string = null;
+
   constructor(
-    public githubUrl: string = null,
-    public androidUrl: string = null,
-    public iosUrl: string = null,
-    public webUrl: string = null
+    githubProjectName: string = null,
+    public webUrl: string = null,
+    androidIdentifier: string = null,
+    iosIdentifier: string = null
   ) {
-    this.githubUrl = this.buildGithubUrl(githubUrl);
+    if (githubProjectName !== null) {
+      this.githubUrl = this.buildGithubUrl(githubProjectName);
+    }
+
+    if (androidIdentifier !== null) {
+      this.androidUrl = this.buildAndroidUrl(androidIdentifier);
+    }
+
+    if (iosIdentifier !== null) {
+      this.iosUrl = this.buildIosUrl(iosIdentifier);
+    }
   }
 
-  buildGithubUrl(githubUrl: string): string {
-    return `https://github.com/tevanc14/${githubUrl}`;
+  buildGithubUrl(githubProjectName: string): string {
+    return `https://github.com/tevanc14/${githubProjectName}`;
+  }
+
+  buildAndroidUrl(androidIdentifier: string): string {
+    return `https://play.google.com/store/apps/details?id=${androidIdentifier}`;
+  }
+
+  buildIosUrl(iosIdentifier: string): string {
+    return `https://apps.apple.com/us/app/${iosIdentifier}`;
   }
 }

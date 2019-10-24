@@ -13,7 +13,12 @@ const projectCategories: Array<ProjectCategory> = [
       "Generate detailed anagrams with customizable criteria.",
       "anagrammatic.png",
       new Demo("anagrammatic.gif", DemoType.Mobile),
-      new ProjectLinks("Anagrammatic")
+      new ProjectLinks(
+        "Anagrammatic",
+        null,
+        "com.tevan.anagrammatic",
+        "anagrammatic-ad-free/id1464447783"
+      )
     ),
     new Project(
       "Not Too Shabby",
@@ -30,12 +35,7 @@ const projectCategories: Array<ProjectCategory> = [
         "statistics for counters over time.",
       null,
       new Demo("colabCounters.gif", DemoType.Web),
-      new ProjectLinks(
-        "ColabCounters",
-        null,
-        null,
-        "https://counters.sleek.software"
-      )
+      new ProjectLinks("ColabCounters", "https://counters.sleek.software")
     )
   ]),
   new ProjectCategory("code", "Bits", [
@@ -61,19 +61,14 @@ const projectCategories: Array<ProjectCategory> = [
       "A single page app to tell a user how many business days are left at a current job, given an end date.",
       null,
       new Demo(null, DemoType.Bit),
-      new ProjectLinks(
-        "JobDaysLeft",
-        null,
-        null,
-        "https://jobdaysleft.sleek.software"
-      )
+      new ProjectLinks("JobDaysLeft", "https://jobdaysleft.sleek.software")
     ),
     new Project(
       "Mint Account Updater",
       "Get the value of an account from UBT and update the corresponding account in Mint.",
       null,
       new Demo(null, DemoType.Bit),
-      new ProjectLinks("MintAccountUpdater", null, null, null)
+      new ProjectLinks("MintAccountUpdater")
     )
   ])
 ];

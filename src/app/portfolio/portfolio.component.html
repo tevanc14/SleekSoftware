@@ -9,9 +9,7 @@
            fxLayoutAlign="space-evenly center">
         <mat-icon class="project-type-icon"
                   color="accent"
-                  [inline]="true">{{
-          projectCategory.matIconName
-        }}</mat-icon>
+                  [inline]="true">{{ projectCategory.matIconName }}</mat-icon>
 
         {{ projectCategory.title }}
 
@@ -42,7 +40,9 @@
                      'logo-row': false
                    }"
                    src="{{ project.logoUrl }}"
-                   loading="lazy" />
+                   loading="lazy"
+                   width="150"
+                   height="150" />
 
               <div fxLayout="column"
                    fxLayoutAlign="space-between start">
@@ -62,14 +62,26 @@
                    'demo-col': true,
                    'demo-row': false
                  }">
-              <img *ngIf="project.demo.path"
-                   [ngClass]="{
-                     'mobile-demo': isMobileDemo(project.demo),
-                     'web-demo': isWebDemo(project.demo),
-                     'bit-demo': isBitDemo(project.demo)
-                   }"
-                   src="{{ project.demo.path }}"
-                   loading="lazy" />
+              <div *ngIf="project.demo.path">
+                <img *ngIf="isMobileDemo(project.demo)"
+                     class="mobile-demo"
+                     src="{{ project.demo.path }}"
+                     loading="lazy"
+                     width="250"
+                     height="400" />
+                <img *ngIf="isWebDemo(project.demo)"
+                     class="web-demo"
+                     src="{{ project.demo.path }}"
+                     loading="lazy"
+                     width="300"
+                     height="169" />
+                <img *ngIf="isBitDemo(project.demo)"
+                     class="bit-demo"
+                     src="{{ project.demo.path }}"
+                     loading="lazy"
+                     width="275"
+                     height="275" />
+              </div>
             </div>
 
             <div class="links"

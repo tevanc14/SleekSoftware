@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.3.0] - 2019-10-21
+
+Added
+
+- Anagrammatic app store links
+- Lazy loading dimensions optimization
+
+Changed
+
+- How project links are built
+- Migrated Font Awesome to FaIconLibrary
+- Upgrade to Angular 8
+- Upgrade FirebaseJS
+
+Removed
+
+- Dialogflow dependency
+
 ## [2.2.0] - 2019-05-26
 
 Added

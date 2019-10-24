@@ -14,7 +14,8 @@ import { ChatService } from "src/app/shared/service/chat/chat.service";
   styleUrls: ["./conversation.component.scss"]
 })
 export class ConversationComponent implements AfterViewChecked, OnInit {
-  @ViewChild("autoScroll") private scrollContainer: ElementRef;
+  @ViewChild("autoScroll", { static: false })
+  private scrollContainer: ElementRef;
 
   public conversation: Array<Message> = [];
 
