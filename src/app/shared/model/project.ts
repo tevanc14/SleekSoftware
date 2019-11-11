@@ -1,3 +1,6 @@
+const gcsPrefix =
+  "https://storage.googleapis.com/interactiveresume-430ce.appspot.com";
+
 export class ProjectCategory {
   constructor(
     public matIconName: string,
@@ -6,7 +9,15 @@ export class ProjectCategory {
   ) {}
 }
 
+export enum ProjectCategoryName {
+  Mobile = "Mobile",
+  Web = "Web",
+  Bits = "Bits"
+}
+
 export class Project {
+  public scrollId: string;
+
   constructor(
     public name: string,
     public description: string,
@@ -15,12 +26,17 @@ export class Project {
     public links: ProjectLinks
   ) {
     this.logoUrl = this.buildLogoUrl(logoUrl);
+    this.scrollId = this.buildScrollId(name);
   }
 
   buildLogoUrl(logoUrl: string): string {
     if (logoUrl !== null) {
-      return `https://storage.googleapis.com/interactiveresume-430ce.appspot.com/logo/${logoUrl}`;
+      return `${gcsPrefix}/logo/${logoUrl}`;
     }
+  }
+
+  buildScrollId(name: string): string {
+    return name.replace(/\s/g, "-").toLowerCase();
   }
 }
 
@@ -31,7 +47,7 @@ export class Demo {
 
   buildPath(path: string): string {
     if (path !== null) {
-      return `https://storage.googleapis.com/interactiveresume-430ce.appspot.com/demo/${path}`;
+      return `${gcsPrefix}/demo/${path}`;
     }
   }
 }

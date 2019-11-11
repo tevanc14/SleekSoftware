@@ -4,7 +4,8 @@ import {
   ProjectCategory,
   Demo,
   DemoType,
-  ProjectLinks
+  ProjectLinks,
+  ProjectCategoryName
 } from "../shared/model/project";
 import { projectCategories } from "./project-categories";
 
@@ -46,5 +47,9 @@ export class PortfolioComponent implements OnInit {
 
   hasWebLink(projectLinks: ProjectLinks): boolean {
     return projectLinks.webUrl !== null;
+  }
+
+  isBitsCategory(projectCategory: ProjectCategory) {
+    return projectCategory.title === ProjectCategoryName.Bits;
   }
 }

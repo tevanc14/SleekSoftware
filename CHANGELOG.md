@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.0] - 2019-11-10
+
+Added
+
+- Anchor link on each project
+
+Changed
+
+- Enumeration for project categories
+
 ## [2.3.0] - 2019-10-21
 
 Added

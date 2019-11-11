@@ -1,6 +1,6 @@
 {
   "name": "sleek-software",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "scripts": {
     "build": "ng build --prod",
     "deploy": "npm run build; firebase deploy",

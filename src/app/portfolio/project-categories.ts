@@ -3,11 +3,12 @@ import {
   Project,
   Demo,
   DemoType,
-  ProjectLinks
+  ProjectLinks,
+  ProjectCategoryName
 } from "../shared/model/project";
 
 const projectCategories: Array<ProjectCategory> = [
-  new ProjectCategory("smartphone", "Mobile", [
+  new ProjectCategory("smartphone", ProjectCategoryName.Mobile, [
     new Project(
       "Anagrammatic",
       "Generate detailed anagrams with customizable criteria.",
@@ -28,7 +29,7 @@ const projectCategories: Array<ProjectCategory> = [
       new ProjectLinks("NotTooShabby")
     )
   ]),
-  new ProjectCategory("web", "Web", [
+  new ProjectCategory("web", ProjectCategoryName.Web, [
     new Project(
       "Colab Counters",
       "Share counters with other users to track random things. Includes permissions based sharing and " +
@@ -38,7 +39,7 @@ const projectCategories: Array<ProjectCategory> = [
       new ProjectLinks("ColabCounters", "https://counters.sleek.software")
     )
   ]),
-  new ProjectCategory("code", "Bits", [
+  new ProjectCategory("code", ProjectCategoryName.Bits, [
     new Project(
       "Facebook Comment Sentiment Analysis",
       "Post Comments are extracted from a Facebook page using Facebook's Graph API. These comments could then have " +

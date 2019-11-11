@@ -13,7 +13,7 @@
 
         {{ projectCategory.title }}
 
-        <button *ngIf="projectCategory.title == 'Bits'"
+        <button *ngIf="isBitsCategory(projectCategory)"
                 matTooltip="Smaller, miscellaneous projects"
                 mat-icon-button>
           <mat-icon>help</mat-icon>
@@ -21,7 +21,9 @@
       </div>
 
       <ng-container *ngFor="let project of projectCategory.projects; let i = index">
+        <!-- Set id for autoscrolling to project anchor -->
         <div class="project"
+             id="{{project.scrollId}}"
              fxLayout="row"
              fxLayout.lt-md="column"
              fxLayoutAlign="space-between center"
