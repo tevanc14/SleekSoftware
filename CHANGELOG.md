@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.1] - 2020-01-28
+
+Changed
+
+- Remediated CVE-2019-16769 reported by npm
+
 ## [2.4.0] - 2019-11-10
 
 Added
