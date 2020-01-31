@@ -41,6 +41,13 @@ const projectCategories: Array<ProjectCategory> = [
   ]),
   new ProjectCategory("code", ProjectCategoryName.Bits, [
     new Project(
+      "Epic Free Games Reminder",
+      "Scrape the Epic Games store and notify a mailing list of the new free offerings.",
+      null,
+      new Demo(null, DemoType.Bit),
+      new ProjectLinks("EpicFreeGamesReminder")
+    ),
+    new Project(
       "Facebook Comment Sentiment Analysis",
       "Post Comments are extracted from a Facebook page using Facebook's Graph API. These comments could then have " +
         "entity and sentiment analyses performed with Google's Natural Language APIs. The results can then be aggregated " +

@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.0] - 2020-01-30
+
+Added
+
+- Epic Free Games Reminder project
+
 ## [2.4.1] - 2020-01-28
 
 Changed
