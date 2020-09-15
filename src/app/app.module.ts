@@ -15,8 +15,8 @@ import { ConversationComponent } from "./chat/conversation/conversation.componen
 import { APP_BASE_HREF } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { environment } from '../environments/environment';
     ChatComponent,
     QueryComponent,
     ConversationComponent,
-    PortfolioComponent
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +36,11 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     MaterialModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production,
+    }),
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: "/" }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

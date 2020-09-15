@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0] - 2020-09-15
+
+Changed
+
+- Upgraded Angular from 8 -> 10 and other dependencies for security
+- Respond properly for a timeout on the Dialogflow fulfillment for a resume
+
 ## [2.5.0] - 2020-01-30
 
 Added

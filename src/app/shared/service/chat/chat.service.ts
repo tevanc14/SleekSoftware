@@ -7,7 +7,7 @@ import { Message, MessageSender, Card, Button } from "../../model/message";
 import { dialogflowForwarderUrl } from "../../../../assets/secrets";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ChatService {
   private conversation = new ReplaySubject<Array<Message>>(1);
@@ -31,7 +31,7 @@ export class ChatService {
 
     const dialogflowForwarderRequest: DialogflowForwarderRequest = {
       query: message.content,
-      sessionId: this.sessionId
+      sessionId: this.sessionId,
     };
 
     this.invokeDialogflowForwarder(dialogflowForwarderRequest);
@@ -42,7 +42,8 @@ export class ChatService {
   ) {
     this.http
       .post(dialogflowForwarderUrl, dialogflowForwarderRequest)
-      .subscribe(response => {
+      .subscribe((response) => {
+        // console.log(JSON.stringify(response));
         this.handleFulfillment(response[0].queryResult.fulfillmentMessages);
       });
   }
@@ -64,9 +65,18 @@ export class ChatService {
   }
 
   handleTextFulfillment(fulfillmentMessage: any): void {
-    this.addToConversation(
-      new Message(fulfillmentMessage.text.text[0], MessageSender.Bot)
-    );
+    if (fulfillmentMessage.text.text[0] !== "") {
+      this.addToConversation(
+        new Message(fulfillmentMessage.text.text[0], MessageSender.Bot)
+      );
+    } else {
+      this.addToConversation(
+        new Message(
+          "There seemed to be a mistake in answering your question, please ask again! My apologies",
+          MessageSender.Bot
+        )
+      );
+    }
   }
 
   handlePayloadFulfillment(fulfillmentMessage: any): void {
@@ -120,6 +130,6 @@ export class ChatService {
 
   sleep() {
     const duration = Math.floor(Math.random() * 800) + 300;
-    return new Promise(resolve => setTimeout(resolve, duration));
+    return new Promise((resolve) => setTimeout(resolve, duration));
   }
 }
